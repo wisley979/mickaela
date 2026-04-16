@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, red, pink);
+  animation: bg 6s infinite alternate;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+@keyframes bg {
+  0% {background: red;}
+  100% {background: #ff4d6d;}
+}
+
+.tela {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  padding: 20px;
+}
+
+.botoes button {
+  margin: 10px;
+  padding: 15px 30px;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#sim {
+  background: white;
+  color: red;
+}
+
+#nao {
+  background: black;
+  color: white;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.fotos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.fotos img {
+  width: 100px;
+  height: 120px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.frases p {
+  font-size: 20px;
+}
+
+.textos {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* CORAÇÕES */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  color: pink;
+  animation: subir 5s linear infinite;
+}
+
+@keyframes subir {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+/* RESPONSIVO */
+@media(max-width:600px){
+  .fotos img {
+    width: 80px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
